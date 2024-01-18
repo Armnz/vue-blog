@@ -22,10 +22,10 @@ export default {
     max-width: 1200px;
     margin: 0 auto;
     padding: 10px;
-    background-color: #7FB3D5; /* Light blue background */
+    background-color: white;
   }
   header h1 {
-    color: #34495E; /* Dark blue text */
+    color: #34495E;
     font-size: 48px;
   }
   header a {

@@ -31,7 +31,7 @@ export default {
   .post {
     margin: 0 40px 30px;
     padding-bottom: 30px;
-    border-bottom: 1px solid #34495E; /* Dark blue border */
+    border-bottom: 1px solid #34495E;
   }
   .post-content {
     display: flex;
@@ -48,7 +48,7 @@ export default {
   }
   .post h3 {
     font-size: 26px;
-    color: #34495E; /* Dark blue text */
+    color: #34495E;
     margin-bottom: 10px;
   }
 </style>

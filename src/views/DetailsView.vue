@@ -46,13 +46,13 @@ export default {
 .post {
   max-width: 1200px;
   margin: 0 auto;
-  background-color: #7FB3D5; /* Light blue background */
-  padding: 20px;
-  border-radius: 8px;
+  background-color: #7FB3D5;
+  padding: 10px;
+  border-radius: 20px;
 }
 
 .post p, .pre {
-  color: #34495E; /* Dark blue text */
+  color: #34495E;
   line-height: 1.5em;
 }
 
@@ -79,12 +79,12 @@ export default {
 }
 
 .edit-btn {
-  background-color: #4CAF50; /* Keep Edit button green */
+  background-color: #4CAF50;
   color: white;
 }
 
 .delete-btn {
-  background-color: #f44336; /* Keep Delete button red */
+  background-color: #f44336;
   color: white;
 }
 </style>

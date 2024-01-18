@@ -4,18 +4,21 @@
 ```
 npm install
 ```
-
-### Compiles and hot-reloads for development
+### Compile and hot-reload for development
 ```
 npm run serve
 ```
+### Populate JSON Server
+```
+json-server --watch data/db.json
+```
 
-### Compiles and minifies for production
+### Compile and minify for production
 ```
 npm run build
 ```
 
-### Lints and fixes files
+### Lint and fixe files
 ```
 npm run lint
 ```

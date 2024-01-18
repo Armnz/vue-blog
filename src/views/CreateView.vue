@@ -13,7 +13,7 @@
 <script>
 import { ref, watch } from 'vue'
 import { useRoute, useRouter } from 'vue-router'
-import getPost from '@/composables/getPost' // Import your getPost composable
+import getPost from '@/composables/getPost'
 
 export default {
   setup() {
@@ -23,12 +23,11 @@ export default {
     const router = useRouter()
     const isEditing = ref(false)
 
-    // getPost composable to fetch post data
     const { post, load } = getPost(route.params.id)
 
     watch(route, async () => {
       if (route.params.id) {
-        await load() // Load the post data
+        await load()
         if (post.value) {
           title.value = post.value.title
           body.value = post.value.body
@@ -56,7 +55,7 @@ export default {
         requestOptions.method = 'PUT'
         await fetch(`http://localhost:3000/posts/${route.params.id}`, requestOptions)
       } else {
-        post.id = Math.floor(Math.random() * 10000) // For new posts
+        post.id = Math.floor(Math.random() * 10000)
         requestOptions.method = 'POST'
         await fetch('http://localhost:3000/posts', requestOptions)
       }
@@ -73,13 +72,14 @@ export default {
 .post {
   max-width: 1200px;
   margin: 0 auto;
-  background-color: #7FB3D5; /* Light blue background */
+  background-color: #7FB3D5;
   padding: 20px;
   border-radius: 8px;
 }
 
-.post p, .pre {
-  color: #34495E; /* Dark blue text */
+.post p,
+.pre {
+  color: #34495E;
   line-height: 1.5em;
 }
 
@@ -97,7 +97,8 @@ export default {
   margin-top: 20px;
 }
 
-.edit-btn, .delete-btn {
+.edit-btn,
+.delete-btn {
   padding: 8px 15px;
   border: none;
   border-radius: 4px;
@@ -114,22 +115,24 @@ export default {
   background-color: #f44336;
   color: white;
 }
+
 .create {
   max-width: 480px;
   margin: 20px auto;
   padding: 20px;
-  background-color: white; /* White background */
+  background-color: white;
   border-radius: 8px;
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2); /* Optional: adds subtle shadow */
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 }
 
-input, textarea {
+input,
+textarea {
   display: block;
   margin: 10px 0;
   width: 100%;
   box-sizing: border-box;
   padding: 10px;
-  border: 1px solid #7FB3D5; /* Light blue border */
+  border: 1px solid #7FB3D5;
   border-radius: 4px;
 }
 
@@ -138,27 +141,26 @@ textarea {
 }
 
 label {
-  display: block; /* Changed to block for better alignment */
+  display: block;
   margin-top: 20px;
   font-size: 18px;
-  color: #34495E; /* Dark blue text */
+  color: #34495E;
 }
 
 button {
   display: block;
   margin-top: 30px;
-  background: #34495E; /* Dark blue background */
+  background: #34495E;
   color: white;
   border: none;
   padding: 10px 16px;
   font-size: 16px;
   border-radius: 4px;
   cursor: pointer;
-  transition: background-color 0.3s; /* Optional: smooth background color transition on hover */
+  transition: background-color 0.3s;
 }
 
 button:hover {
-  background: #2C3E50; /* Slightly darker blue on hover */
-}
-</style>
+  background: #2C3E50;
+}</style>
 

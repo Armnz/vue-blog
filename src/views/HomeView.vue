@@ -9,10 +9,7 @@
 </template>
 
 <script>
-/* import { ref } from 'vue'
- */import getPosts from '../composables/getPosts'
-
-// component imports
+import getPosts from '../composables/getPosts'
 import PostList from '../components/PostList.vue'
 
 export default {
@@ -33,7 +30,7 @@ export default {
     max-width: 1200px;
     margin: 0 auto;
     padding: 10px;
-    background-color: white; /* White background */
+    background-color: white;
   }
   .layout {
     display: grid;
